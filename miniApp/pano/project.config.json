@@ -36,7 +36,6 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "appid": "wx33406ece92b499f4",
   "projectname": "pano",
   "libVersion": "2.14.1",
   "condition": {
