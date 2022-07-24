@@ -1,10 +1,7 @@
 package com.weixin.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.weixin.util.MessageUtil;
-import com.weixin.util.MoLi;
-import com.weixin.util.TuLing;
+import com.weixin.util.Qingyunke;
 import org.springframework.stereotype.Service;
 import com.weixin.entity.message.resp.TextMessage;
 
@@ -72,7 +69,7 @@ public class WechatService {
 //					respContent = BaiduApis.api_todayInHistory();
                 } else {
 //					String tulingRes = TuLing.rebootV2(content);
-                    String reboot = MoLi.reboot(content);
+                    String reboot = Qingyunke.reboot(content);
                     respContent = reboot;
                 }
                 textMessage.setContent(respContent);
