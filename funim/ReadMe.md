@@ -1,4 +1,4 @@
-ÆßÅ£ÔÆ´æ´¢ÐèÒªµÄjar ¡ª¡ª 11¸öjar°ü
+ï¿½ï¿½Å£ï¿½Æ´æ´¢ï¿½ï¿½Òªï¿½ï¿½jar ï¿½ï¿½ï¿½ï¿½ 11ï¿½ï¿½jarï¿½ï¿½
 commons-codec-1.9.jar
 commons-logging.jar
 fluent-hc-4.3.5.jar
@@ -11,19 +11,19 @@ httpmime-4.3.5.jar
 org.json.jar
 sdk-6.1.7.jar
 
-springMVC¿ò¼ÜÐèÒªµÄjar ¡ª¡ª 32¸öjar°ü
+springMVCï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½jar ï¿½ï¿½ï¿½ï¿½ 32ï¿½ï¿½jarï¿½ï¿½
 antlr-2.7.7
 aopalliance-1.0
 aspectjweaver-1.7.2
 commons-fileupload-1.3
 commons-io-2.4.jar
 commons-lang-2.6
-commons-logging  ------ÖØ¸´
+commons-logging  ------ï¿½Ø¸ï¿½
 hibernate-commons-annotations-4.0.1.Final
 hibernate-core-4.2.2.Final
 hibernate-jpa-2.0-api-1.0.1.Final
-httpclient-4.1.1 ------ ÔÝÊ±È¥µô£¬±ÜÃâÓëÆßÅ£³åÍ»
-httpcore-4.1     ------ ÔÝÊ±È¥µô£¬±ÜÃâÓëÆßÅ£³åÍ»
+httpclient-4.1.1 ------ ï¿½ï¿½Ê±È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½Í»
+httpcore-4.1     ------ ï¿½ï¿½Ê±È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½Í»
 javassist-3.15.0-GA
 jboss-logging-3.1.0.GA
 jboss-transaction-api_1.1_spec-1.0.0.Final
@@ -46,16 +46,16 @@ spring-tx-3.2.0.RELEASE
 spring-web-3.2.0.RELEASE
 spring-webmvc-3.2.0.RELEASE
 
-»¹ÓÐÐèÒª
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òª
 dom4j-1.6.1
 
 
-Json½âÎöjar ¡ª¡ª 2¸ö
+Jsonï¿½ï¿½ï¿½ï¿½jar ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½
 fastjson-1.1.31
 gson-2.2.2
 
 
-log ÈÕÖ¾ jar ¡ª¡ª 2¸ö
+log ï¿½ï¿½Ö¾ jar ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½
 slf4j-api-1.7.5
 slf4j-log4j12-1.7.5
 
