@@ -1,0 +1,8 @@
+*.iml
+.idea/
+target/
+.settings/
+.classpath
+.project
+/funimg-springboot-jdk11/src/main/resources/application-dev.yml
+/funimg-springboot-jdk11/src/main/resources/mybatis-generator.properties
