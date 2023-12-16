@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.funimg.zsx.ext.FunAlbumDetailDao">
+    <resultMap id="BaseResultMap" type="com.funimg.zsx.entity.FunAlbumDetail">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="album_id" jdbcType="BIGINT" property="albumId" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="img_uuids" jdbcType="VARCHAR" property="imgUuids" />
+        <result column="img_source" jdbcType="VARCHAR" property="imgSource" />
+        <result column="del" jdbcType="INTEGER" property="del" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="creator_id" jdbcType="VARCHAR" property="creatorId" />
+        <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+        <result column="updater_id" jdbcType="VARCHAR" property="updaterId" />
+        <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, album_id, sort, title, img_uuids, img_source, del, create_time, update_time,
+    creator_id, creator_name, updater_id, updater_name
+  </sql>
+
+
+    <sql id="Base_Where_Clause">
+        <where>
+            <if test="search.del != null">
+                and del = #{search.del,jdbcType=INTEGER}
+            </if>
+            <if test="search.ids != null and search.ids.size() > 0">
+                and id in
+                <foreach item="item" index="index" collection="search.ids" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </sql>
+
+    <select id="selectByParams" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM fun_album_detail
+        <include refid="Base_Where_Clause"/>
+    </select>
+
+
+    <select id="selectByAlbumId" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM fun_album_detail
+        <where>
+            del = 0
+            and album_id = #{albumId}
+        </where>
+        ORDER BY sort
+    </select>
+
+
+
+
+</mapper>

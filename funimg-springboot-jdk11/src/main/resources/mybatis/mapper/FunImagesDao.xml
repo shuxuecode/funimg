@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.funimg.zsx.ext.FunImagesDao">
+    <resultMap id="BaseResultMap" type="com.funimg.zsx.entity.FunImages">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="img_uuid" jdbcType="VARCHAR" property="imgUuid" />
+        <result column="thumbnail" jdbcType="VARCHAR" property="thumbnail" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="img_url" jdbcType="VARCHAR" property="imgUrl" />
+        <result column="img_type" jdbcType="INTEGER" property="imgType" />
+        <result column="width" jdbcType="INTEGER" property="width" />
+        <result column="height" jdbcType="INTEGER" property="height" />
+        <result column="file_size" jdbcType="BIGINT" property="fileSize" />
+        <result column="sinaimg_url" jdbcType="VARCHAR" property="sinaimgUrl" />
+        <result column="qiniu_img_url" jdbcType="VARCHAR" property="qiniuImgUrl" />
+        <result column="del" jdbcType="INTEGER" property="del" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="creator_id" jdbcType="VARCHAR" property="creatorId" />
+        <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+        <result column="updater_id" jdbcType="VARCHAR" property="updaterId" />
+        <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, img_uuid, thumbnail, title, img_url, img_type, width, height, file_size, sinaimg_url,
+    qiniu_img_url, del, create_time, update_time, creator_id, creator_name, updater_id,
+    updater_name
+  </sql>
+
+
+    <sql id="Base_Where_Clause">
+        <where>
+            <if test="search.del != null">
+                and del = #{search.del,jdbcType=INTEGER}
+            </if>
+            <if test="search.ids != null and search.ids.size() > 0">
+                and id in
+                <foreach item="item" index="index" collection="search.ids" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="search.summary != null">
+                and summary like concat('%', #{search.summary,jdbcType=VARCHAR}, '%')
+            </if>
+        </where>
+    </sql>
+
+    <select id="selectByParams" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM fun_images
+        <include refid="Base_Where_Clause"/>
+    </select>
+
+</mapper>
