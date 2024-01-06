@@ -38,14 +38,6 @@ public class AlbumController {
     @PostMapping("/lists")
     @ResponseBody
     public JsonTable getList(
-//            @ApiParam(value = "区域id") @RequestParam(value = "districtId", defaultValue = "") String districtId,
-//            @ApiParam(value = "模糊查询文本") @RequestParam(value = "searchText", required = false) String searchText,
-//            @ApiParam("租金范围") @RequestParam(value = "rentalRange", required = false) String rentalRange,
-//            @ApiParam("其它条件，1：最近发布，2：距离由近到远，3：租金由低到高，4：租金由高到低") @RequestParam(value = "filter", required = false) String filter,
-//            @ApiParam("当选择距离由近到远时，该值为纬度") @RequestParam(value = "lng", required = false) String lng,
-//            @ApiParam("当选择距离由近到远时，该值为经度") @RequestParam(value = "lat", required = false) String lat,
-//            @ApiParam("页码") @RequestParam(defaultValue = "1") Integer pageNum,
-//            @ApiParam("条数") @RequestParam(defaultValue = "10") Integer pageSize
             @RequestParam(defaultValue = "1") Integer pageNum,
             @RequestParam(defaultValue = "10") Integer pageSize
     ) {

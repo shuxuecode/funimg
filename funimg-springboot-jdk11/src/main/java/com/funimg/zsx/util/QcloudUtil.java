@@ -43,7 +43,6 @@ public class QcloudUtil {
             String eTag = putObjectResult.getETag();
             if (StringUtils.isNotBlank(eTag)) {
                 return domain + key;
-//                return "https://highness-1-1253922088.cos.ap-beijing.myqcloud.com" + key;
             }
         } catch (Exception e) {
             e.printStackTrace();
